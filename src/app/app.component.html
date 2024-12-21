@@ -1,0 +1,56 @@
+<div class="dnd-theme">
+  <h1>Dungeon & Dragons Combat Calculator</h1>
+
+  <div *ngFor="let instance of creatureInstances; let i = index" class="creature-instance">
+    <h2>Creature {{ i + 1 }}</h2>
+
+    <div class="input-group">
+      <label for="creatureName-{{ i }}">Creature Name</label>
+      <input
+        id="creatureName-{{ i }}"
+        type="text"
+        [(ngModel)]="instance.name"
+        placeholder="Enter creature name"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="creatureNumber-{{ i }}">Number of Creatures</label>
+      <input
+        id="creatureNumber-{{ i }}"
+        type="number"
+        [(ngModel)]="instance.number"
+        min="1"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="attackBonus-{{ i }}">Attack Bonus</label>
+      <input
+        id="attackBonus-{{ i }}"
+        type="number"
+        [(ngModel)]="instance.attackBonus"
+      />
+    </div>
+
+    <div class="input-group">
+      <label for="playerAC-{{ i }}">Player AC</label>
+      <input
+        id="playerAC-{{ i }}"
+        type="number"
+        [(ngModel)]="instance.playerAC"
+      />
+    </div>
+
+    <button class="calculate-button" (click)="calculateAttack(instance)">
+      Calculate
+    </button>
+
+    <div class="output">
+      <p>Attack Needed for One Hit: <strong>{{ instance.attackNeeded ?? 'N/A' }}</strong></p>
+      <p>Creatures That Hit This Turn: <strong>{{ instance.creaturesThatHit ?? 0 }}</strong></p>
+    </div>
+  </div>
+
+  <button class="add-button" (click)="addInstance()">+ Add Creature</button>
+</div>

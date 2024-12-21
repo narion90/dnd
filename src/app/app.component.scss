@@ -1,0 +1,89 @@
+.dnd-theme {
+    font-family: 'Georgia', serif;
+    background-color: #1b1b2f;
+    color: #e43f5a;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  
+    h1 {
+      text-align: center;
+      color: #ffe227;
+    }
+  
+    .creature-instance {
+      background-color: #162447;
+      border: 2px solid #e43f5a;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+  
+      h2 {
+        color: #ffe227;
+        margin-bottom: 10px;
+      }
+  
+      .input-group {
+        margin-bottom: 10px;
+  
+        label {
+          display: block;
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+        }
+  
+        input {
+          width: 100%;
+          padding: 8px;
+          border-radius: 5px;
+          border: 2px solid #ffe227;
+          background-color: #1b1b2f;
+          color: #fff;
+        }
+      }
+  
+      .calculate-button {
+        background-color: #e43f5a;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #ffe227;
+          color: #162447;
+        }
+      }
+  
+      .output {
+        margin-top: 10px;
+  
+        p {
+          font-size: 1rem;
+          text-align: left;
+        }
+      }
+    }
+  
+    .add-button {
+      display: block;
+      background-color: #ffe227;
+      color: #162447;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 20px auto;
+      text-align: center;
+  
+      &:hover {
+        background-color: #e43f5a;
+        color: #fff;
+      }
+    }
+  }
+  
